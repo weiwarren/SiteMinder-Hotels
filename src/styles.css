@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+
+html{
+  height: 100%;
+}
+body {
+  margin: 0px;
+  height: 100%;
+  font-family: Roboto, sans-serif;
+
+}
+
+
+body .mat-dialog-container{
+  max-width: 100%;
+}
+
+body snack-bar-container{
+  opacity: 0.7;
+}
+body .mat-simple-snackbar{
+  justify-content: center;
+}
+
+
+body .cdk-focus-trap-content{
+  height: 100%;
+}
+
+
+.align-center{
+  display: flex;
+  align-items: center;
+}

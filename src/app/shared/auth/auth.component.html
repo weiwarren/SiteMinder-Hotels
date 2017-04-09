@@ -1,0 +1,17 @@
+<button  md-icon-button (click)="login()" *ngIf="!(auth | async)?.auth.uid"><md-icon>input</md-icon></button>
+
+<div *ngIf="(auth | async)?.auth.uid" class="sign-out-options">
+  <a [mdMenuTriggerFor]="menu" class="profile">
+    <span [style.background-image]="'url(http://res.cloudinary.com/giftuu/image/fetch/'+ (auth | async)?.auth.photoURL+')'" class="profile-photo"></span>
+  </a>
+  <md-menu #menu="mdMenu" [overlapTrigger]="false">
+    <button md-menu-item (click)="addHotel()">
+      <md-icon>add</md-icon>
+      <span>Add My Hotel</span>
+    </button>
+    <button md-menu-item  (click)="logout()">
+      <md-icon>exit_to_app</md-icon>
+      <span>Logout</span>
+    </button>
+  </md-menu>
+</div>

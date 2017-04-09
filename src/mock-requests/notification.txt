@@ -1,0 +1,11 @@
+
+{
+  "notification": {
+    "title": " Message Title",
+    "body": " message body",
+    "click_action" : "https://dummypage.com"
+  },
+  "to" : "eShHSCShTi4:APA91bFmeB89jTn_fctPIEYr-v09URd21OSekDh2uRsK7Ke7YbJoARyUtHiX7khHlYbIg8fFCipgsQhSscydapPVjJ3T3Bi2n97Zg8I0nFRW4ABMOehkUBc0D1WmM5GkIJGoSVyo7Vrb"
+}
+
+curl -H "Content-Type: application/json" -H "Authorization:key=AAAAktDw2IU:APA91bEpCrJrxNpmkgiRV53M2N-Lsco_5tfbcy6cnkgAPKshQxj_kwMYa0530Jx49FanRQJquBKu34L7g9MAlBh-iwS2pR1xeah3qRsDlIZoeVnrWnExErStUfUb4tWoPuHka8GSPfH2" -X POST -d '{"notification": {"title":"Background Message Title","body":"Background message body1","click_action":"https://dummypage.com"},"to":"eShHSCShTi4:APA91bFmeB89jTn_fctPIEYr-v09URd21OSekDh2uRsK7Ke7YbJoARyUtHiX7khHlYbIg8fFCipgsQhSscydapPVjJ3T3Bi2n97Zg8I0nFRW4ABMOehkUBc0D1WmM5GkIJGoSVyo7Vrb"}' https://fcm.googleapis.com/fcm/send

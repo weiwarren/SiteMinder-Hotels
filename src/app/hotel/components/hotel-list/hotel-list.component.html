@@ -1,0 +1,24 @@
+<!--
+<div class="tile-container" [hidden]="true">
+  <div class="tile"  *ngFor="let hotel of hotels | async" (click)="openHotelDetail(hotel)">
+    <hotel-cell [hotel]="hotel"></hotel-cell>
+  </div>
+</div>
+
+-->
+
+<md-list class="list">
+  <div md-subheader>
+    <google-address-search (onLocationSelected)="onLocationSelected($event)"></google-address-search>
+  </div>
+  <div class="list-items">
+    <md-list-item *ngFor="let hotel of hotels | async" (click)="viewHotelDetails(hotel)" class="list-item" [ngClass]="{'selected':hotel == selectedHotel}">
+      <div md-list-avatar class="hotel-image hotel-placeholder" [ngClass]="{'hotel-image-placeholder': !hotel.photos}"
+           [style.background-image]="'url(http://res.cloudinary.com/giftuu/image/fetch/' + hotel.photos + ')'">
+      </div>
+      <h4 class="header" md-line>{{hotel.name | uppercase}}</h4>
+      <p md-line class="sub-header"> {{hotel.vicinity}} </p>
+      <p md-line class="sub-header"> {{hotel.distance | distanceLiteral}} </p>
+    </md-list-item>
+  </div>
+</md-list>

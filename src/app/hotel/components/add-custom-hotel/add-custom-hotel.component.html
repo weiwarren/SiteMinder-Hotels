@@ -1,0 +1,27 @@
+<h1 md-dialog-title>ADD HOTEL</h1>
+
+<div md-dialog-content>
+  <form class="add-hotel-form" #hotelForm="ngForm">
+    <md-input-container class="full-width">
+      <input mdInput placeholder="Name" value="" [(ngModel)]="name" name="name" required>
+    </md-input-container>
+    <md-input-container class="full-width">
+      <textarea mdInput placeholder="Description" [(ngModel)]="description" name="description"></textarea>
+    </md-input-container>
+
+
+    <md-input-container class="full-width">
+      <input mdInput placeholder="Image URL" [(ngModel)]="photos" name="photos">
+    </md-input-container>
+    <google-address-search [placeholder]="'Address'"
+                           (onLocationSelected)="locationSelected($event)"></google-address-search>
+
+  </form>
+
+</div>
+<div md-dialog-actions align="end">
+  <button md-button (click)="saveForm()" [disabled]="!hotelForm.valid || !place">Save</button>
+  <button md-button md-dialog-close>Cancel</button>
+</div>
+
+

@@ -1,0 +1,20 @@
+<div class="side-menu" [hidden]="true">
+  <md-button-toggle-group #group="mdButtonToggleGroup" [selected]="list">
+    <md-button-toggle value="list" #list>
+      <md-icon>list</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="map" #map>
+      <md-icon>map</md-icon>
+    </md-button-toggle>
+  </md-button-toggle-group>
+</div>
+
+<div class="content">
+  <div class="list">
+    <hotel-list></hotel-list>
+  </div>
+  <div class="map">
+    <hotel-map-view></hotel-map-view>
+  </div>
+</div>
+

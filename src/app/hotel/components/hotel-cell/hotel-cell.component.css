@@ -1,0 +1,38 @@
+
+.card{
+  padding: 24px;
+}
+.mat-dialog-container{
+  max-width: 100%;
+}
+
+.title{
+  font-weight:bold;
+}
+
+.card-content{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card-details{
+  max-width: 300px;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  padding: 0px 10px 0 0;
+}
+.card-image{
+  width:100px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 0px;
+}
+.detail-text{
+  padding-left: 10px;
+}
+.card-actions{
+  padding: 5px 9px;
+}

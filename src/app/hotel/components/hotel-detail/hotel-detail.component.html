@@ -1,0 +1,26 @@
+<div class="content">
+  <h1 class="title">{{hotel.name}}</h1>
+  <button md-icon-button  md-dialog-close class="close-button">
+    <md-icon>close</md-icon>
+  </button>
+  <span md-line *ngIf="hotel.description">{{hotel.description}}</span>
+  <p md-line class="align-center">
+    <md-icon>place</md-icon>
+    <span class="detail-text">{{hotel.vicinity}}</span></p>
+  <div class="image" *ngIf="hotel.photos"
+       [style.background-image]="'url(http://res.cloudinary.com/giftuu/image/fetch/' + hotel.photos + ')'">
+  </div>
+  <p md-line class="align-center">
+    <md-icon>star_rate</md-icon>
+    <span class="detail-text">Rating {{hotel.rating}}</span>
+  </p>
+  <div class="card-actions">
+    <button md-button (click)="bookmark(hotel)">
+      <md-icon>bookmark_outline</md-icon>
+      Bookmark
+    </button>
+
+
+  </div>
+
+</div>

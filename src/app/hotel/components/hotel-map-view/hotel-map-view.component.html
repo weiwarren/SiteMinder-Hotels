@@ -1,0 +1,13 @@
+<div class="container">
+  <sebm-google-map  [latitude]="latitude" [longitude]="longitude" [usePanning]="true" [scrollwheel]="false" [zoom]="zoom" [fitBounds]="bounds" (centerChange)="centerChanged($event)" #map>
+    <sebm-google-map-marker  *ngFor="let marker of markers; let i = index"
+                             [latitude]="marker.lat"
+                             [iconUrl]="marker.custom ? 'http://maps.google.com/mapfiles/ms/icons/blue.png': ''"
+                             [longitude]="marker.lng" (markerClick)="markerClicked(marker)">
+      <sebm-google-map-info-window [(isOpen)]="marker.focused" class="map-info-window">
+        <hotel-cell [hotel]="marker"></hotel-cell>
+      </sebm-google-map-info-window>
+    </sebm-google-map-marker>
+    <map-content [(markers)]="markers" (markersChange)="markersChanged($event)" [centre]="centreObservable" [(bounds)]="bounds" (boundsChange)="boundsChange($event)"></map-content>
+  </sebm-google-map>
+</div>

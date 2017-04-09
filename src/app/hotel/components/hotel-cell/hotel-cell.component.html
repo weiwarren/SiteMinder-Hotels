@@ -1,0 +1,29 @@
+<md-card class="card">
+  <md-card-header>
+    <md-card-title class="title">{{hotel.name}}</md-card-title>
+    <md-card-subtitle class="subtitle" *ngIf="hotel.description">{{hotel.description}}</md-card-subtitle>
+  </md-card-header>
+
+
+  <md-card-content class="card-content">
+    <div class="card-details">
+      <span md-line class="align-center">
+        <md-icon>place</md-icon><span class="detail-text">{{hotel.vicinity}}</span>
+      </span>
+      <p md-line class="align-center">
+        <md-icon>star_rate</md-icon><span class="detail-text">Rating: {{hotel.rating}}</span>
+      </p>
+    </div>
+    <div class="card-image" md-card-image [style.background-image]="'url(http://res.cloudinary.com/giftuu/image/fetch/' + hotel.photos + ')'">
+    </div>
+
+  </md-card-content>
+  <md-card-actions class="card-actions text-right">
+    <button md-button (click)="openHotelDetail(hotel)">
+      View Details
+    </button>
+    <button md-icon-button (click)="bookmark(hotel)">
+      <md-icon>bookmark_outline</md-icon>
+    </button>
+  </md-card-actions>
+</md-card>

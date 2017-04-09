@@ -1,0 +1,24 @@
+<md-sidenav-container class="side-nav-container">
+  <md-sidenav #sidenav class="side-nav">
+    <site-minder-side-nav></site-minder-side-nav>
+   </md-sidenav>
+
+  <div class="side-nav-content">
+    <nav>
+      <button md-icon-button (click)="sidenav.open()">
+        <md-icon>more_vert</md-icon>
+      </button>
+      <auth></auth>
+    </nav>
+
+    <main>
+      <hotel></hotel>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+
+
+</md-sidenav-container>
+

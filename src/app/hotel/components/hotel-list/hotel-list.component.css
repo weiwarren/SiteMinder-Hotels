@@ -1,0 +1,61 @@
+.list{
+  display: flex;
+  height: 100%;
+  width:100%;
+  flex-direction: column;
+}
+
+.list-items{
+  flex-grow: 1;
+  overflow: scroll;
+}
+
+.tile-container{
+  display: flex;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  width:100%;
+}
+
+.tile {
+  width: 31%;
+  margin: 1%;
+  min-width: 350px;
+  flex:1
+}
+
+.list-items .list-item{
+  cursor: pointer;
+}
+.list-items .list-item.selected{
+  color: black;
+  background:#c8c8c8;
+}
+
+.list-items .list-item .hotel-image{
+  min-width: 50px;
+  min-height: 50px;
+  background-size: cover;
+  border-radius: 15%;
+}
+
+.hotel-image-placeholder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150%;
+  border: 1px solid #333;
+}
+
+
+.list-items .list-item.selected .hotel-image-placeholder{
+  border-color: #0087cf;
+}
+
+.list-item .header{
+  font-weight: bold;
+}
+.list-item .sub-header{
+  padding: 3px 0 0 0;
+  color: #888;
+}
